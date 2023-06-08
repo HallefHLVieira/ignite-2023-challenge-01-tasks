@@ -11,5 +11,6 @@ export async function json(req,res){
     req.body = null;
   }
 
+  // Garantindo que todo response será com estrutura json
   res.setHeader('Content-type', 'application/json')
 }
