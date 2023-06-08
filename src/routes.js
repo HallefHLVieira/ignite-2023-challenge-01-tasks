@@ -37,22 +37,6 @@ export const routes = [
       return res.end(JSON.stringify(tasks));
     }
   },
-  
-  // SELECT TASKS
-  {
-    method: 'GET',
-    path: buildRoutePath('/tasks'),
-    handler: (req,res) => {
-      const { search } = req.query;
-      
-      const tasks = database.select('tasks',{
-        title: search,
-        description: search,
-      });
-
-      return res.end(JSON.stringify(tasks));
-    }
-  },
 
   // UPDATE TASKS
   {
@@ -64,7 +48,6 @@ export const routes = [
       const {title,description} = req.body;
 
       const task = database.getTaskById('tasks',taskId);
-      console.log('task ---> ', task);
       
       database.update('tasks', taskId, {title, description, updated_at: Date.now()});
 
@@ -74,7 +57,7 @@ export const routes = [
 
   // UPDATE TASKS
   {
-    method: 'PUT',
+    method: 'PATCH',
     path: buildRoutePath('/tasks/close/:taskId'),
     handler:(req,res) => {
 

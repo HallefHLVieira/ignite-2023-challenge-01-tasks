@@ -25,7 +25,7 @@ export class Database {
     if(search){
       data = data.filter(row => {
         return Object.entries(search).some(([key,value]) => {
-          return row[key].includes(value);
+          return row;
         });
       });
     }
@@ -43,8 +43,7 @@ export class Database {
     if(taskId){
       data = data.filter(row => {
         return Object.entries(taskId).some(([key,value]) => {
-          console.log('ROW -> ',row);
-          return row[key].includes(value);
+          return row;
         });
       });
     }
