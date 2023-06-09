@@ -17,5 +17,8 @@
   "bugs": {
     "url": "https://github.com/HallefHLVieira/ignite-2023-challenge-01-tasks/issues"
   },
-  "homepage": "https://github.com/HallefHLVieira/ignite-2023-challenge-01-tasks#readme"
+  "homepage": "https://github.com/HallefHLVieira/ignite-2023-challenge-01-tasks#readme",
+  "dependencies": {
+    "csv-parse": "^5.4.0"
+  }
 }
