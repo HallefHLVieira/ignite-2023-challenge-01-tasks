@@ -4,7 +4,7 @@ import { json } from './middlewares/json.js';
 import {routes} from './routes.js';
 import { extractQueryParams } from './utils/extract-query-params.js'
 
-// create my server http
+// creating my http server
 const server = http.createServer(async (req,res) => {
 
   const {method, url} = req;
@@ -24,9 +24,8 @@ const server = http.createServer(async (req,res) => {
 
     return route.handler(req,res);
   }
-  console.log(route);
   
-  return res.writeHead(404).end("Not found!");
+  return res.writeHead(404).end("Route not found!");
 })
 
 server.listen(3333);

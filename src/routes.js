@@ -30,7 +30,7 @@ export const routes = [
     }
   },
   
-  // LISTS ALL TASKS
+  // LISTS TASKS
   {
     method: 'GET',
     path: buildRoutePath('/tasks'),
